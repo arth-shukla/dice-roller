@@ -3,7 +3,7 @@ import './Roller.css'
 function Roller(props) {
 
     let { children, ...rest } = props
-    return <div id {...rest}>
+    return <div id="dice-wrapper" {...rest}>
         {children}
     </div>
 }

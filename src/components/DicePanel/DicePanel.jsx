@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './Dice.css'
 import { Alert, Button, Stack, InputGroup, Form, ButtonGroup } from 'react-bootstrap';
 import DiceImage from '../../assets/DiceImage'
+import './DicePanel.css'
 
 function DiceRollButton({ i, setRolls, diceNum, buttonText, ...rest }) {
 
@@ -10,7 +10,7 @@ function DiceRollButton({ i, setRolls, diceNum, buttonText, ...rest }) {
         {...rest}
         onClick={() => {
             let rollsArr = [...Array(i+1)].map(_=>Math.ceil(Math.random()*(diceNum)))
-            if (i == 0) {
+            if (i === 0) {
                 setRolls(rollsArr[0])
             } else {
                 setRolls(`${rollsArr.reduce((a, b) => a + b, 0)} = ${rollsArr.join(' + ')}`)
@@ -30,13 +30,13 @@ function DiceRollButtonGroup({ setRolls, diceNum }) {
         </ButtonGroup>
         <ButtonGroup>
             {Array(4).fill(0).map((x, i) => {
-                return <DiceRollButton i={i+4} setRolls={setRolls} diceNum={diceNum} buttonText={i+1+`d${diceNum}`} className="roll-button" variant="outline-primary"/>
+                return <DiceRollButton i={i+4} setRolls={setRolls} diceNum={diceNum} buttonText={i+5+`d${diceNum}`} className="roll-button" variant="outline-primary"/>
             })}
         </ButtonGroup>
     </ButtonGroup>
 }
 
-function Dice(props) {
+function DicePanel(props) {
     const variant = 'info'
     const [rolls, setRolls] = useState('')
     const [customRolls, setCustomRolls] = useState(1)
@@ -65,4 +65,4 @@ function Dice(props) {
     </div>
 }
 
-export default Dice
+export default DicePanel
