@@ -17,9 +17,9 @@ function App() {
           })}
         </Roller>
       </body>
-      <footer>
+      {/* <footer>
         Authored by Arth Shukla
-      </footer>
+      </footer> */}
     </div>
   </ThemeProvider>
 }

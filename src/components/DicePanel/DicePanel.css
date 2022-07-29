@@ -1,5 +1,5 @@
 .dice-pane {
-    width: min(270px, 100%);
+    width: 270px;
     max-width: 100%;
     margin: auto
 }
@@ -26,7 +26,8 @@
     height: 42px;
     width: 100%;
     margin: auto !important;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
+    overflow: hidden;
     white-space: nowrap;
 }
