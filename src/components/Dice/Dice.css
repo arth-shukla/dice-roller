@@ -1,0 +1,22 @@
+.roll-buttons-container {
+    width: 100%;
+}
+.dice-image-container {
+    width: 50px !important;
+    margin: 5px 5px 5px 0;
+}
+.roll-controls {
+    margin: 5px 0 5px;
+}
+.roll-button {
+    width: 52px;
+    /* height: 40px; */
+}
+.roll-button-custom {
+    /* width: 80px; */
+    /* height: 40px; */
+}
+.custom-roll-val {
+    width: 102px !important;
+    /* height: 40px; */
+}
