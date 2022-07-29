@@ -9,7 +9,7 @@ function DiceImage(props) {
         "d20": <svg width="50px" height="50px"></svg>,
     }
 
-    return <div style={{width:"50px"}}>{diceSVGs[props.dice]}</div>
+    return <div style={{width:"50px", display: "inline-block"}}>{diceSVGs[props.dice]}</div>
 }
 
 export default DiceImage

@@ -1,5 +1,5 @@
-/* xs screen */
-@media screen and (max-width: 934px) {
+/* very small screen */
+@media screen and (max-width: 570px) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 1; grid-row: 2; }
     #d8 { grid-column: 1; grid-row: 3; }
@@ -9,8 +9,8 @@
     #dice-wrapper { grid-template-columns: repeat(1, 1fr) !important; }
 }
 
-/* sm screen */
-@media screen and (min-width: 934px) {
+/* small screen */
+@media screen and (min-width: 570px) and (max-width: 850px) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 1; grid-row: 2; }
@@ -20,8 +20,8 @@
     #dice-wrapper { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
-/* md screen */
-/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+/* medium screen */
+@media screen and (min-width: 850px) and (max-width: 1130px) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -29,10 +29,10 @@
     #d12 { grid-column: 2; grid-row: 2; }
     #d20 { grid-column: 3; grid-row: 2; }
     #dice-wrapper { grid-template-columns: repeat(3, 1fr) !important; }
-} */
+}
 
-/* lg screen */
-/* @media screen and (min-width: 1200px) {
+/* large screen */
+@media screen and (min-width: 1130px) and (max-width: 1410px) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -40,10 +40,10 @@
     #d12 { grid-column: 2; grid-row: 2; }
     #d20 { grid-column: 3; grid-row: 2; }
     #dice-wrapper { grid-template-columns: repeat(4, 1fr) !important; }
-} */
+}
 
-/* xl screen
-@media screen and (min-width: 1200px) {
+/* very large screen */
+@media screen and (min-width: 1410px) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -51,7 +51,7 @@
     #d12 { grid-column: 5; grid-row: 1; }
     #d20 { grid-column: 3; grid-row: 2; }
     #dice-wrapper { grid-template-columns: repeat(5, 1fr) !important; }
-} */
+}
 
 #dice-wrapper {
     display: grid;

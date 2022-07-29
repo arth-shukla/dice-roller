@@ -7,19 +7,18 @@ function App() {
 
   return <ThemeProvider>
     <div className="App">
-      <Container className="header" fluid>
+      <header>
         <h1>Dice Roller</h1>
-      </Container>
+      </header>
       <body>
-
         <Roller id="dice-wrapper">
-          {["d4", "d6", "d8", "d10", "d12", "d20"].map((dice) => {
-            return <Dice id={dice} dice={dice} />
+          {[4, 6, 8, 10, 12, 20].map((diceNum) => {
+            return <Dice id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} />
           })}
         </Roller>
       </body>
       <footer>
-
+        Authored by Arth Shukla
       </footer>
     </div>
   </ThemeProvider>

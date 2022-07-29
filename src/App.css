@@ -1,11 +1,20 @@
-.header {
+header {
   background-color: #282c34;
   color: white;
-  padding: .5em 1em !important;
+  padding-top: .5em;
+  padding-bottom: .5em;
+
+  position: fixed;
+  top:0;
+  height: 50px;
+  width: 100% !important;
+  z-index:100;
+
 }
 
-.header h1 {
-  margin: 0;
+header h1 {
+  margin: 0 .5em 0;
+  font-size: calc(50px - 1.5em);
 }
 
 .roller-container {
@@ -13,4 +22,21 @@
   margin: 10px;
   display: flex;
   float: left
+}
+
+body {
+  margin-top: 60px !important;
+  margin-bottom: 50px !important;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100% !important;
+
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: .5em 0;
 }

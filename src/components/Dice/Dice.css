@@ -1,22 +1,32 @@
+.dice-pane {
+    width: min(270px, 100%);
+    max-width: 100%;
+    margin: auto
+}
 .roll-buttons-container {
     width: 100%;
 }
 .dice-image-container {
     width: 50px !important;
-    margin: 5px 5px 5px 0;
 }
 .roll-controls {
-    margin: 5px 0 5px;
+    margin: 5px 0 10px;
 }
 .roll-button {
-    width: 52px;
-    /* height: 40px; */
-}
-.roll-button-custom {
-    /* width: 80px; */
+    width: 53.75px;
     /* height: 40px; */
 }
 .custom-roll-val {
-    width: 102px !important;
+    width: 60px !important;
     /* height: 40px; */
+}
+.alert {
+    padding: .5em !important;
+    text-align: center;
+    height: 42px;
+    width: 100%;
+    margin: auto !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
