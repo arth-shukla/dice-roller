@@ -60,8 +60,8 @@
     #d8 { grid-column: 3; grid-row: 1; }
     #d10 { grid-column: 4; grid-row: 1; }
     #d12 { grid-column: 5; grid-row: 1; }
-    #d20 { grid-column: 3; grid-row: 2; }
-    #dice-wrapper { grid-template-columns: repeat(5, 1fr) !important; }
+    #d20 { grid-column: 6; grid-row: 1; }
+    #dice-wrapper { grid-template-columns: repeat(6, 1fr) !important; }
 }
 
 #dice-wrapper {

@@ -10,6 +10,9 @@ header {
   width: 100% !important;
   z-index:100;
 
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 header h1 {
@@ -39,4 +42,8 @@ footer {
   color: white;
   text-align: center;
   padding: .5em 0;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
