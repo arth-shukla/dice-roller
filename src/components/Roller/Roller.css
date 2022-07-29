@@ -1,0 +1,77 @@
+/* xs screen */
+@media screen and (max-width: 576px) {
+    #d4 { grid-column: 1; grid-row: 1; }
+    #d6 { grid-column: 1; grid-row: 2; }
+    #d8 { grid-column: 1; grid-row: 3; }
+    #d10 { grid-column: 1; grid-row: 4; }
+    #d12 { grid-column: 1; grid-row: 5; }
+    #d20 { grid-column: 1; grid-row: 6; }
+    #dice-wrapper { grid-template-columns: repeat(1, 1fr) !important; }
+}
+
+/* sm screen */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #d4 { grid-column: 1; grid-row: 1; }
+    #d6 { grid-column: 2; grid-row: 1; }
+    #d8 { grid-column: 1; grid-row: 2; }
+    #d10 { grid-column: 2; grid-row: 2; }
+    #d12 { grid-column: 1; grid-row: 3; }
+    #d20 { grid-column: 2; grid-row: 3; }
+    #dice-wrapper { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* md screen */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #d4 { grid-column: 1; grid-row: 1; }
+    #d6 { grid-column: 2; grid-row: 1; }
+    #d8 { grid-column: 3; grid-row: 1; }
+    #d10 { grid-column: 1; grid-row: 2; }
+    #d12 { grid-column: 2; grid-row: 2; }
+    #d20 { grid-column: 3; grid-row: 2; }
+    #dice-wrapper { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* lg screen */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #d4 { grid-column: 1; grid-row: 1; }
+    #d6 { grid-column: 2; grid-row: 1; }
+    #d8 { grid-column: 3; grid-row: 1; }
+    #d10 { grid-column: 4; grid-row: 1; }
+    #d12 { grid-column: 2; grid-row: 2; }
+    #d20 { grid-column: 3; grid-row: 2; }
+    #dice-wrapper { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* xl screen */
+@media screen and (min-width: 1200px) {
+    #d4 { grid-column: 1; grid-row: 1; }
+    #d6 { grid-column: 2; grid-row: 1; }
+    #d8 { grid-column: 3; grid-row: 1; }
+    #d10 { grid-column: 4; grid-row: 1; }
+    #d12 { grid-column: 5; grid-row: 1; }
+    #d20 { grid-column: 3; grid-row: 2; }
+    #dice-wrapper { grid-template-columns: repeat(5, 1fr) !important; }
+}
+
+#dice-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px;
+    grid-auto-rows: auto;
+}
+
+/* // xs --- Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// sm --- Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// md --- Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// lg --- Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// xl --- Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */

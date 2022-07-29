@@ -1,0 +1,16 @@
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: .5em 1em !important;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.roller-container {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  float: left
+}
