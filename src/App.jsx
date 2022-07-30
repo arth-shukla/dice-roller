@@ -2,7 +2,7 @@ import { useState } from 'react'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
 import Roller from './components/Roller/Roller'
-import { Container, ThemeProvider } from 'react-bootstrap';
+import { ThemeProvider } from 'react-bootstrap';
 
 import './App.scss';
 
@@ -18,16 +18,14 @@ function App() {
       <header>
         <h1>Dice Roller</h1>
       </header>
-      <body>
-        <div className='roller-ui'>
-          <Roller>
-            {[4, 6, 8, 10, 12, 20].map((diceNum) => {
-              return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
-            })}
-          </Roller>
-          <RollHistory rolls={rolls} />
-        </div>
-      </body>
+      <div className='roller-ui'>
+        <Roller>
+          {[4, 6, 8, 10, 12, 20].map((diceNum) => {
+            return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
+          })}
+        </Roller>
+        <RollHistory rolls={rolls} />
+      </div>
       {/* <footer>
         Authored by Arth Shukla
       </footer> */}
