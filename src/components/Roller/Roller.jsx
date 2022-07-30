@@ -1,4 +1,4 @@
-import './Roller.css'
+import './Roller.scss'
 
 function Roller(props) {
 

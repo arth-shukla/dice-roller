@@ -1,13 +1,11 @@
 .dice-pane {
-    width: 270px;
+    width: calc(285px + 3em);
     max-width: 100%;
-    margin: auto
+    margin: 0 auto 1em;
+    padding: 1em 1.5em;
 }
 .roll-buttons-container {
     width: 100%;
-}
-.dice-image-container {
-    width: 50px !important;
 }
 .roll-controls {
     margin: 5px 0 10px;

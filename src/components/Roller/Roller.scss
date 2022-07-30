@@ -1,10 +1,20 @@
+
+$dpanel: 285px + 48px;
+$cell: 10px + $dpanel;
+$scr1: 10px + $cell;
+$scr2: $scr1 + $cell;
+$scr3: $scr2 + $cell;
+$scr4: $scr3 + $cell;
+$scr5: $scr4 + $cell;
+$scr6: $scr5 + $cell;
+
 /* ultra thin screen */
-@media screen and (max-width: 290px) {
+@media screen and (max-width: $scr1) {
     #dice-wrapper { margin: 0 !important; }
 }
 
 /* very small screen */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: $scr2) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 1; grid-row: 2; }
     #d8 { grid-column: 1; grid-row: 3; }
@@ -15,7 +25,7 @@
 }
 
 /* small screen */
-@media screen and (min-width: 570px) and (max-width: 850px) {
+@media screen and (min-width: $scr2) and (max-width: $scr3) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 1; grid-row: 2; }
@@ -26,7 +36,7 @@
 }
 
 /* medium screen */
-@media screen and (min-width: 850px) and (max-width: 1130px) {
+@media screen and (min-width: $scr3) and (max-width: $scr4) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -37,7 +47,7 @@
 }
 
 /* large screen */
-@media screen and (min-width: 1130px) and (max-width: 1410px) {
+@media screen and (min-width: $scr4) and (max-width: $scr5) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -48,7 +58,7 @@
 }
 
 /* very large screen */
-@media screen and (min-width: 1410px) and (max-width: 1690px) {
+@media screen and (min-width: $scr5) and (max-width: $scr6) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -59,7 +69,7 @@
 }
 
 /* very, very large screen */
-@media screen and (min-width: 1690px) {
+@media screen and (min-width: $scr6) {
     #d4 { grid-column: 1; grid-row: 1; }
     #d6 { grid-column: 2; grid-row: 1; }
     #d8 { grid-column: 3; grid-row: 1; }
@@ -73,21 +83,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 10px;
+    // margin: 10px;
     grid-auto-rows: auto;
 }
-
-/* // xs --- Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// sm --- Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// md --- Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// lg --- Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// xl --- Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
