@@ -9,10 +9,12 @@ function DiceRollButton({ i, setRolls, diceNum, buttonText, addRoll, ...rest }) 
         size="sm"
         {...rest}
         onClick={() => {
-            let rollsArr = [...Array(i+1)].map(_=>Math.ceil(Math.random()*(diceNum)))
-            let rollTotal = (i === 0) ? rollsArr[0] : rollsArr.reduce((a, b) => a + b, 0)
-            setRolls(rollTotal)
-            addRoll({ dice: `d${diceNum}`, roll: `${rollTotal} = ${rollsArr.join(' + ')}` })
+            if (i >= 0) {
+                let rollsArr = [...Array(i+1)].map(_=>Math.ceil(Math.random()*(diceNum)))
+                let rollTotal = (i === 0) ? rollsArr[0] : rollsArr.reduce((a, b) => a + b, 0)
+                setRolls(rollTotal)
+                addRoll({ dice: `${i+1}d${diceNum}`, roll: rollTotal + ((i === 0) ? '' : ` = ${rollsArr.join(' + ')}`) })
+            }
         }}
     >
         {buttonText}
@@ -53,7 +55,16 @@ function DicePanel(props) {
                         placeholder="#"
                         aria-label={`Enter a custom number of ${props.dice} to roll.`}
                         value={customRolls}
-                        onChange={e=>setCustomRolls(e.target.value)}
+                        onChange={e=> {
+                            let val = e.target.value
+                            if (val >= 100)
+                                setCustomRolls(99)
+                            else if (val <= 0 && val.length !== 0)
+                                setCustomRolls(1)
+                            else
+                                setCustomRolls(val)
+                        }}
+                        max={100}
                     />
                 </InputGroup>
                 <DiceRollButton i={customRolls-1} setRolls={setRolls} diceNum={props.diceNum} buttonText={'Roll'} variant="primary" addRoll={props.addRoll} />
