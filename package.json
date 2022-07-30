@@ -17,9 +17,9 @@
   "scripts": {
     "full-deploy": "npm run predeploy && npm run deploy && git add --all && git commit -m \"full-deploy\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build && git add --all && git commit -m \"deploy\"",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build && git add --all && git commit -m \"build\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
