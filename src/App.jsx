@@ -4,6 +4,7 @@ import RollHistory from './components/RollHistory/RollHistory'
 import Roller from './components/Roller/Roller'
 
 import './App.scss';
+import './bootstrap-override.css'
 
 function App() {
 
