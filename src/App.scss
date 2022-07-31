@@ -1,6 +1,6 @@
+
 :root {
   --100-width: 100%;
-  --bs-body-bg: #fff !important;
 }
 ::selection {
   background: rgba(var(--primary-focus-shadow), .5);
@@ -11,6 +11,7 @@
   --primary-hover: #0b5ed7;
   --primary-other: #0a58ca;
   --primary-focus-shadow: 49,132,253;
+  --input-border-size: 1px;
   --alert-color: var(--primary-other);
   --alert-shadow: 49,132,253,.28;
   --alert-outline: 49,132,253,.4;
@@ -31,6 +32,7 @@
   --primary-hover: #db5178;
   --primary-other: #c4496c;
   --primary-focus-shadow: 242,111,148;
+  --input-border-size: 1px;
   --alert-color: var(--primary-other);
   --alert-shadow: 242,111,148,.28;
   --alert-outline: 242,111,148,.4;
@@ -48,14 +50,17 @@
 
 .app-dark {
   --primary: #007acc;
-  --primary-hover: #0a84ff;
-  --primary-other: #003eaa;
+  --primary-hover: #1791e3;
+  --primary-other: var(--primary);
   // --primary-focus-shadow: 49,132,253;
+  --input-border-size: 2px;
   --alert-color: var(--primary);
+  // --alert-shadow: 49,132,253,.28;
+  --alert-outline: 0, 122, 204;
   --bg-main: #121212;
-  --bg-header: none;
+  --bg-header: var(--bg-main);
   --outline-header: #2d2d30;
-  --bg-cell: #2d2d30;
+  --bg-cell: rgba(45,45,48,.4);
   --bg-input: #2d2d30;
   --outline: #121212;
   --text: rgba(255, 255, 255, .87);

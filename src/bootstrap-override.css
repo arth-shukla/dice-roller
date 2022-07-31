@@ -39,12 +39,12 @@
     color: var(--text-med-em) !important;
     white-space: nowrap;
     background-color: var(--bg-input) !important;
-    border: 1px solid var(--outline) !important;
+    border: var(--input-border-size) solid var(--outline) !important;
   }
   .form-control {
     background-color: var(--pure-color) !important;
     color: var(--text) !important;
-    border: 1px solid var(--outline) !important;
+    border: var(--input-border-size) solid var(--outline) !important;
   }
   .form-control:focus{
     border-color: var(--primary) !important;

@@ -67,7 +67,7 @@ function DicePanel(props) {
                         max={100}
                     />
                 </InputGroup>
-                <DiceRollButton i={customRolls-1} setRolls={setRolls} diceNum={props.diceNum} buttonText={'Roll'} variant="primary" addRoll={props.addRoll} />
+                <DiceRollButton i={customRolls-1} setRolls={setRolls} diceNum={props.diceNum} buttonText='Roll' variant="primary" addRoll={props.addRoll} />
             </Stack>
         </Stack>
     </Cell>
