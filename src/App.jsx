@@ -6,8 +6,8 @@ import Roller from './components/Roller/Roller'
 import './App.scss';
 import './bootstrap-override.css'
 
-function App() {
 
+function App() {
   const [rolls, setRolls] = useState([])
 
   function addRoll(roll) {
@@ -15,20 +15,20 @@ function App() {
   }
 
   return <div className='app-light'>
-      <header>
-        <h1>Dice Roller</h1>
-      </header>
-      <div className='roller-ui'>
-        <Roller>
-          {[4, 6, 8, 10, 12, 20].map((diceNum) => {
-            return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
-          })}
-        </Roller>
-        <RollHistory rolls={rolls} />
-      </div>
-      {/* <footer>
-        Authored by Arth Shukla
-      </footer> */}
+    <header>
+      <h1>Dice Roller</h1>
+    </header>
+    <div className='roller-ui'>
+      <Roller>
+        {[4, 6, 8, 10, 12, 20].map((diceNum) => {
+          return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
+        })}
+      </Roller>
+      <RollHistory rolls={rolls} />
+    </div>
+    {/* <footer>
+      Authored by Arth Shukla
+    </footer> */}
   </div>
 }
 
