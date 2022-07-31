@@ -6,12 +6,12 @@ function DiceImage(props) {
                 points="2,46.65 52,46.65 27,3.35"
                 style={{
                     fill: "none",
-                    stroke: "#0d6efd",
+                    stroke: "var(--primary)",
                     strokeWidth: "3",
                 }}
             />
             <text x="21" y="36.5" style={{
-                fill: "#0d6efd",
+                fill: "var(--primary)",
                 fontWeight: "bold",
                 font: "sans-serif"
             }}>4</text>
@@ -21,12 +21,12 @@ function DiceImage(props) {
                 points="6,6 6,44 44,44 44,6"
                 style={{
                     fill: "none",
-                    stroke: "#0d6efd",
+                    stroke: "var(--primary)",
                     strokeWidth: "3",
                 }}
             />
             <text x="19.5" y="31.5" style={{
-                fill: "#0d6efd",
+                fill: "var(--primary)",
                 fontWeight: "bold",
                 font: "sans-serif"
             }}>6</text>
@@ -36,12 +36,12 @@ function DiceImage(props) {
                 points="6,27 25,3 44,27 25,51"
                 style={{
                     fill: "none",
-                    stroke: "#0d6efd",
+                    stroke: "var(--primary)",
                     strokeWidth: "3",
                 }}
             />
             <text x="19.5" y="33" style={{
-                fill: "#0d6efd",
+                fill: "var(--primary)",
                 fontWeight: "bold",
                 font: "sans-serif"
             }}>8</text>
@@ -51,12 +51,12 @@ function DiceImage(props) {
                 points="6,36 25,3 44,36 25,51"
                 style={{
                     fill: "none",
-                    stroke: "#0d6efd",
+                    stroke: "var(--primary)",
                     strokeWidth: "3",
                 }}
             />
             <text x="16" y="36" style={{
-                fill: "#0d6efd",
+                fill: "var(--primary)",
                 fontWeight: "bold",
                 font: "sans-serif"
             }}>10</text>
@@ -66,12 +66,12 @@ function DiceImage(props) {
                 points="27,48.5 52.576,29.318 42.428,2 12.148,2 2,29.318"
                 style={{
                     fill: "none",
-                    stroke: "#0d6efd",
+                    stroke: "var(--primary)",
                     strokeWidth: "3",
                 }}
             />
             <text x="18" y="29" style={{
-                fill: "#0d6efd",
+                fill: "var(--primary)",
                 fontWeight: "bold",
                 font: "sans-serif"
             }}>12</text>
@@ -81,12 +81,12 @@ function DiceImage(props) {
                 points="2,23.65 14.5,45.3 39.5,45.3 52,23.65 39.5,2 14.5,2"
                 style={{
                     fill: "none",
-                    stroke: "#0d6efd",
+                    stroke: "var(--primary)",
                     strokeWidth: "3",
                 }}
             />
             <text x="17" y="29.5" style={{
-                fill: "#0d6efd",
+                fill: "var(--primary)",
                 fontWeight: "bold",
                 font: "sans-serif"
             }}>20</text>
