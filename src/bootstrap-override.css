@@ -31,9 +31,9 @@
     --bs-gradient: none !important;
   }
   .alert-info {
-    --bs-alert-color: var(--primary-other) !important;
-    --bs-alert-bg: rgba(var(--primary-focus-shadow), .28) !important;
-    --bs-alert-border-color: rgba(var(--primary-focus-shadow), .4) !important;
+    --bs-alert-color: var(--alert-color) !important;
+    --bs-alert-bg: rgba(var(--alert-shadow)) !important;
+    --bs-alert-border-color: rgba(var(--alert-outline)) !important;
   }
   .input-group-text {
     color: var(--text-med-em) !important;
