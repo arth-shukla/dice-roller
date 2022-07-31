@@ -11,6 +11,8 @@ $scr6: $scr5 + $cell;
 /* ultra thin screen */
 @media screen and (max-width: $scr1) {
     #dice-wrapper { margin: 0 !important; }
+    .roller-ui { padding: 0 !important; }
+    :root {--100-width: 333px !important;}
 }
 
 /* very small screen */
