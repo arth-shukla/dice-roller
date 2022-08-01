@@ -27,8 +27,8 @@ $primary-pink: #f25b86;
     --bg-input: #e9ecef;
     --outline: rgb(200,200,200);
     --text: rgb(0,0,0);
-    --text-med-em: #212529;
-    --text-low-em: var(--text);
+    --text-med-em: var(--text);
+    --text-low-em: #212529;
     --pure-color: #fff;
     
     @if $app-state == "startup" {
@@ -47,7 +47,7 @@ $primary-pink: #f25b86;
     --bg-cell: rgba(45,45,48,.4);
     --bg-input: #2d2d30;
     --outline: #121212;
-    --text: var(--text-med-em); //rgba(255, 255, 255, .87);
+    --text: rgba(255, 255, 255, .87);
     --text-med-em: rgba(255, 255, 255, .6);
     --text-low-em: rgba(255, 255, 255, .38);
     --pure-color: #121212;
@@ -172,7 +172,7 @@ $primary-pink: #f25b86;
     }
     .form-control {
         background-color: var(--pure-color) !important;
-        color: var(--text) !important;
+        color: var(--text-med-em) !important;
         border: var(--input-border-size) solid var(--outline) !important;
     
         transition: $theme-transition !important;
