@@ -17,9 +17,9 @@ function App() {
   const [appModeDark, setAppModeDark] = useState(false)
   const [appAltColor, setAppAltColor] = useState(false)
 
-  useEffect(() => {
-    if (appModeDark) setAppAltColor(false)
-  }, [appModeDark])
+  // useEffect(() => {
+  //   if (appModeDark) setAppAltColor(false)
+  // }, [appModeDark])
 
   return <div id="app-container" className={appModeDark ? 'app-dark' : appAltColor ? 'app-pink' : 'app-light'}>
     <header>

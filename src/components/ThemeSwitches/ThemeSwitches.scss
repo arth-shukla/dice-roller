@@ -56,10 +56,10 @@
 }
 
 #pink-color-switch #targ {
-    background-color: v.$primary-light;
-    border: 1px solid v.$primary-light;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 #default-color-switch #targ {
-    border: calc(v.$theme-anim-size/2) solid v.$primary-pink;
+    border: calc(v.$theme-anim-size/2) solid var(--primary);
 }
