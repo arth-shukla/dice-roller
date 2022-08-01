@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
 import Roller from './components/Roller/Roller'
@@ -16,6 +16,12 @@ function App() {
 
   const [appModeDark, setAppModeDark] = useState(false)
   const [appAltColor, setAppAltColor] = useState(false)
+
+  useEffect(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setAppModeDark(true)
+    }
+  },[])
 
   return <div id="app-container" className={appModeDark ? 'app-dark' : appAltColor ? 'app-pink' : 'app-light'}>
     <header>
