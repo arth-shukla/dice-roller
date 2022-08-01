@@ -31,8 +31,8 @@
 }
 
 #moon-dark-switch #targ {
-    background: v.$bg-light-header;
-    border: 1px solid v.$bg-light-header;
+    background: var(--text-med-em);
+    border: 1px solid var(--text-med-em)
 }
 #moon-dark-switch #cover {
     background: var(--bg-header);
