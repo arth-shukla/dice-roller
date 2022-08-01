@@ -64,6 +64,8 @@ $primary-pink: #f25b86;
         @include pink;
     } @else if $theme-color == "blue-dark" {
         @include blue-dark;
+    } @else if $theme-color == "pink-dark" {
+        @include pink-dark;
     } @else {
         @include blue;
     } 
@@ -90,18 +92,30 @@ $primary-pink: #f25b86;
     --alert-outline: 49,132,253,.4;
 }
 @mixin blue-dark {
-    --primary: #007acc;
+    --primary: rgb(0, 122, 204);
     --primary-hover: #1791e3;
     --primary-other: var(--primary);
     --primary-focus-shadow: 0, 122, 204;
     --alert-color: var(--primary);
-    // --alert-shadow: 0, 122, 204;
-    --alert-outline: 0, 122, 204;
+    --alert-shadow: none;
+    --alert-outline: var(--primary-focus-shadow);
 }
 @mixin pink-dark {
-    --primary: #cc3b92;
+    --primary: rgb(204, 59, 146);
     --primary-hover: #a03375
-    --primary-other: 
+    --primary-other: var(--primary);
+    --primary-focus-shadow: 204, 59, 146
+    --alert-color: (--primary);
+    --alert-shadow: none;
+    --alert-outline: var(--primary-focus-shadow);
+
+    // color palette:
+    // color: rgb(255, 206, 234);
+    // color: rgb(241, 152, 204);
+    // color: rgb(255, 142, 210);
+    // color: rgb(204, 59, 146);
+    // color: rgb(160, 51, 117);
+    // color: rgb(83, 0, 49);
 }
 
 @mixin override-bootstrap {
