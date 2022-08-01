@@ -1,5 +1,18 @@
 @use './variables' as v;
 
+:root[data-theme="light"] {
+  body {
+    background-color: #fff !important;
+    transition: v.$theme-transition;
+  }
+}
+:root[data-theme="dark"] {
+  body {
+    background-color: #121212 !important;
+    transition: v.$theme-transition;
+  }
+}
+
 ::selection {
   background: rgba(var(--primary-focus-shadow), .5);
 }

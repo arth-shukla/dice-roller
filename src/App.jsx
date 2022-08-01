@@ -17,8 +17,16 @@ function App() {
   const [appModeDark, setAppModeDark] = useState(false)
   const [appAltColor, setAppAltColor] = useState(false)
 
+  const changeTheme = () => {
+    let temp = !appModeDark
+    setAppModeDark(temp)
+    document.documentElement.setAttribute("data-theme", temp ? "dark" : "light")
+    
+  }
+
   useEffect(() => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute("data-theme", "dark")
       setAppModeDark(true)
     }
   },[])
@@ -28,7 +36,7 @@ function App() {
       <h1>Dice Roller</h1>
       <Stack className="theme-controls" direction="horizontal" gap={3}>
         <LightColorSwitch isDefault={appAltColor} setThemeMode={() => setAppAltColor(!appAltColor)} disabled={appModeDark} />
-        <LightDarkSwitch isMoon={appModeDark} setThemeMode={() => setAppModeDark(!appModeDark)} />
+        <LightDarkSwitch isMoon={appModeDark} setThemeMode={changeTheme} />
       </Stack>
     </header>
     <div className='roller-ui'>
