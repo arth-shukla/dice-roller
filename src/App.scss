@@ -36,16 +36,12 @@
 .blue {
   @include v.theme-color(blue);
 }
-
 .pink {
   @include v.theme-color(pink);
 }
-
 .blue-dark {
   @include v.theme-color("blue-dark");
 }
-
-@include v.override-bootstrap;
 
 ::selection {
   background: rgba(var(--primary-focus-shadow), .5);
