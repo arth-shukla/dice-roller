@@ -57,14 +57,16 @@ function App() {
         <ThemeSwitch darkMode={appModeDark} changeTheme={changeTheme} />
       </Stack>
     </header>
-    <div className='roller-ui'>
-      <Roller>
-        {[4, 6, 8, 10, 12, 20].map((diceNum) => {
-          return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
-        })}
-      </Roller>
-      <RollHistory rolls={rolls} />
-    </div>
+    <content>
+      <div className='roller-ui'>
+        <Roller>
+          {[4, 6, 8, 10, 12, 20].map((diceNum) => {
+            return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
+          })}
+        </Roller>
+        <RollHistory rolls={rolls} />
+      </div>
+    </content>
     {/* <footer>
       Authored by Arth Shukla
     </footer> */}

@@ -6,7 +6,7 @@
     max-height: 500px;
     max-width: 800px;
     overflow-y: auto;
-    width: 100%;
+    width: var(--100-width);
     color: var(--text-med-em);
 
     transition: v.$theme-transition
@@ -15,7 +15,7 @@
 .roll-table {
     color: var(--text-med-em) !important;
 
-    transition: v.$theme-transition
+    transition: v.$theme-transition;
 }
 
 .table-roll {
