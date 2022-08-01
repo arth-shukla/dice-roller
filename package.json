@@ -15,7 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "full-deploy": "npm run predeploy && npm run deploy && git add --all && git commit -m \"full-deploy\"",
+    "deploy-commit": "npm run deploy && git add --all && git commit -m \"full-deploy\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
