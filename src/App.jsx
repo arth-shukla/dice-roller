@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { LightDarkSwitch, LightColorSwitch } from './components/ThemeSwitches/ThemeSwitches'
+import { ColorSwitch, ThemeSwitch } from './components/ThemeSwitches/ThemeSwitches'
 import Roller from './components/Roller/Roller'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
@@ -7,20 +7,22 @@ import { Stack } from 'react-bootstrap'
 
 import './App.scss';
 
+const themeColors = ["blue", "pink"]
+
 function App() {
   const [rolls, setRolls] = useState([])
-  function addRoll(roll) {
-    setRolls([roll].concat(rolls))
-  }
+  function addRoll(roll) { setRolls([roll].concat(rolls)) }
 
   const [appModeDark, setAppModeDark] = useState(false)
-  const [appAltColor, setAppAltColor] = useState(false)
+  const [appColor, setAppColor] = useState(0)
 
   const changeTheme = () => {
     let temp = !appModeDark
     setAppModeDark(temp)
     document.documentElement.setAttribute("data-theme", temp ? "dark" : "light")
   }
+
+  const changeColor = () => { setAppColor((appColor + 1) % 2) }
 
   useEffect(() => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -29,12 +31,12 @@ function App() {
     }
   },[])
 
-  return <div id="app-container" className={appModeDark ? 'blue-dark' : appAltColor ? 'pink' : 'blue'}>
+  return <div id="app-container" className={themeColors[appColor] + (appModeDark ? '-dark' : '')}>
     <header>
       <h1>Dice Roller</h1>
       <Stack className="theme-controls" direction="horizontal" gap={3}>
-        <LightColorSwitch isDefault={appAltColor} setThemeMode={() => setAppAltColor(!appAltColor)} disabled={appModeDark} />
-        <LightDarkSwitch isMoon={appModeDark} setThemeMode={changeTheme} />
+        <ColorSwitch color={appColor} changeColor={changeColor} />
+        <ThemeSwitch darkMode={appModeDark} changeTheme={changeTheme} />
       </Stack>
     </header>
     <div className='roller-ui'>

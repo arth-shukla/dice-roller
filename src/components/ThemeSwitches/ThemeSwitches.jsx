@@ -1,10 +1,10 @@
 import './ThemeSwitches.scss'
 
-function LightDarkSwitch({ setThemeMode, isMoon, ...rest }) {
+function ThemeSwitch({ changeTheme, darkMode, ...rest }) {
     return <button 
-        id={isMoon ? "moon-dark-switch" : "sun-dark-switch"}
+        id={darkMode ? "moon-dark-switch" : "sun-dark-switch"}
         class="dark-switch"
-        onClick={() => { setThemeMode() }}
+        onClick={changeTheme}
         {...rest}
     >
         <div id='targ'></div>
@@ -12,15 +12,15 @@ function LightDarkSwitch({ setThemeMode, isMoon, ...rest }) {
     </button>
 }
 
-function LightColorSwitch({ setThemeMode, isDefault, ...rest }) {
+function ColorSwitch({ changeColor, color, ...rest }) {
     return <button 
-        id={isDefault ? "default-color-switch" : "pink-color-switch"} 
+        id={(color == 0) ? "default-color-switch" : "pink-color-switch"} 
         class="dark-switch" 
-        onClick={() => { setThemeMode() }}
+        onClick={changeColor}
         {...rest}
     >
         <div id='targ'></div>
     </button>
 }
 
-export { LightDarkSwitch, LightColorSwitch }
+export { ThemeSwitch, ColorSwitch }

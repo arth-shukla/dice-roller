@@ -102,9 +102,9 @@ $primary-pink: #f25b86;
 }
 @mixin pink-dark {
     --primary: rgb(204, 59, 146);
-    --primary-hover: #a03375
+    --primary-hover: #a03375;
     --primary-other: var(--primary);
-    --primary-focus-shadow: 204, 59, 146
+    --primary-focus-shadow: 204, 59, 146;
     --alert-color: (--primary);
     --alert-shadow: none;
     --alert-outline: var(--primary-focus-shadow);

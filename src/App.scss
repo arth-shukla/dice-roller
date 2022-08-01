@@ -33,14 +33,17 @@
   }
 }
 
-.blue {
-  @include v.theme-color(blue);
+.blue { 
+  @include v.theme-color(blue); 
 }
-.pink {
-  @include v.theme-color(pink);
+.pink { 
+  @include v.theme-color(pink); 
 }
-.blue-dark {
-  @include v.theme-color("blue-dark");
+.blue-dark { 
+  @include v.theme-color("blue-dark"); 
+}
+.pink-dark { 
+  @include v.theme-color("pink-dark"); 
 }
 
 ::selection {
