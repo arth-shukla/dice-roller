@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
+import { LightDarkSwitch, LightColorSwitch } from './components/ThemeSwitches/ThemeSwitches'
+import Roller from './components/Roller/Roller'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
-import Roller from './components/Roller/Roller'
-import { LightDarkSwitch, LightColorSwitch } from './components/ThemeSwitches/ThemeSwitches'
+import { Stack } from 'react-bootstrap'
 
 import './App.scss';
-import './bootstrap-override.scss'
-import { Stack } from 'react-bootstrap'
 
 function App() {
   const [rolls, setRolls] = useState([])
@@ -21,7 +20,6 @@ function App() {
     let temp = !appModeDark
     setAppModeDark(temp)
     document.documentElement.setAttribute("data-theme", temp ? "dark" : "light")
-    
   }
 
   useEffect(() => {

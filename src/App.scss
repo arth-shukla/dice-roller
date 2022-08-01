@@ -1,17 +1,53 @@
 @use './variables' as v;
 
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff !important;
+    @include v.light-theme("startup", blue);
+    @include v.override-bootstrap;
+
+    color: var(--primary) !important;
+  }
+  
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212 !important;
+    @include v.dark-theme("startup");
+    @include v.override-bootstrap;
+
+    color: var(--primary) !important;
+  }
+}
+
 :root[data-theme="light"] {
   body {
     background-color: #fff !important;
     transition: v.$theme-transition;
+    @include v.light-theme("running", blue)
   }
 }
 :root[data-theme="dark"] {
   body {
     background-color: #121212 !important;
     transition: v.$theme-transition;
+    @include v.dark-theme("running");
   }
 }
+
+.app-light {
+  @include v.theme-color("running", blue);
+}
+
+.app-pink {
+  @include v.theme-color("running", pink);
+}
+
+.app-dark {
+  @include v.theme-color("running", "blue-dark");
+}
+
+@include v.override-bootstrap;
 
 ::selection {
   background: rgba(var(--primary-focus-shadow), .5);
