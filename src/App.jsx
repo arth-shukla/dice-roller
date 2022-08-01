@@ -36,25 +36,17 @@ function App() {
 
   useEffect(() => {
 
-    let storageDataTheme = window?.localStorage.getItem('data-theme')
-    let storageDataThemeColor = window?.localStorage.getItem('data-theme-color')
-
-    if (storageDataTheme) {
-      document.documentElement.setAttribute("data-theme", storageDataTheme)
-      setAppModeDark(storageDataTheme === "dark" ? true : false)
-    }
-    else if (window?.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window?.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute("data-theme", "dark")
       window.localStorage.setItem('data-theme', 'dark');
       setAppModeDark(true)
     }
     
+    let storageDataThemeColor = window?.localStorage.getItem('data-theme-color')
     if (storageDataThemeColor) {
       document.documentElement.setAttribute("data-theme-color", storageDataThemeColor)
       setAppColor(themeColors.indexOf(storageDataThemeColor))
     }
-
-    console.log(storageDataTheme, storageDataThemeColor)
   },[])
 
   return <div id="app-container" className={themeColors[appColor] + (appModeDark ? '-dark' : '')}>

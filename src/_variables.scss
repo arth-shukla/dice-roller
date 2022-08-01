@@ -41,6 +41,7 @@ $primary-pink: #f25b86;
 @mixin dark-theme($app-state) {
     @include blue-dark;
 
+    --input-border-size: 2px;
     --bg-main: #121212;
     --bg-header: var(--bg-main);
     --outline-header: #2d2d30;
