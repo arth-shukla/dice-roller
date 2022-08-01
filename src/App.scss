@@ -33,18 +33,10 @@
   }
 }
 
-.blue { 
-  @include v.theme-color(blue); 
-}
-.pink { 
-  @include v.theme-color(pink); 
-}
-.blue-dark { 
-  @include v.theme-color("blue-dark"); 
-}
-.pink-dark { 
-  @include v.theme-color("pink-dark"); 
-}
+.blue { @include v.theme-color(blue); }
+.pink { @include v.theme-color(pink); }
+.blue-dark { @include v.theme-color("blue-dark"); }
+.pink-dark { @include v.theme-color("pink-dark"); }
 
 ::selection {
   background: rgba(var(--primary-focus-shadow), .5);
@@ -52,7 +44,7 @@
 
 header {
   background-color: var(--bg-header);
-  color: var(--text-med-em);
+  color: var(--text);
   padding-top: .5em;
   padding-bottom: .5em;
 

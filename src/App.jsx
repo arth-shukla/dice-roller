@@ -18,17 +18,43 @@ function App() {
 
   const changeTheme = () => {
     let temp = !appModeDark
-    setAppModeDark(temp)
     document.documentElement.setAttribute("data-theme", temp ? "dark" : "light")
+    window.localStorage.setItem('data-theme', temp ? "dark" : "light");
+    setAppModeDark(temp)
+
+    console.log(appColor, temp)
   }
 
-  const changeColor = () => { setAppColor((appColor + 1) % 2) }
+  const changeColor = () => {
+    let temp = (appColor + 1) % 2
+    document.documentElement.setAttribute("data-theme-color", themeColors[temp])
+    window.localStorage.setItem('data-theme-color', themeColors[temp]);
+    setAppColor(temp)
+
+    console.log(temp, appModeDark)
+  }
 
   useEffect(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
+    let storageDataTheme = window?.localStorage.getItem('data-theme')
+    let storageDataThemeColor = window?.localStorage.getItem('data-theme-color')
+
+    if (storageDataTheme) {
+      document.documentElement.setAttribute("data-theme", storageDataTheme)
+      setAppModeDark(storageDataTheme === "dark" ? true : false)
+    }
+    else if (window?.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute("data-theme", "dark")
+      window.localStorage.setItem('data-theme', 'dark');
       setAppModeDark(true)
     }
+    
+    if (storageDataThemeColor) {
+      document.documentElement.setAttribute("data-theme-color", storageDataThemeColor)
+      setAppColor(themeColors.indexOf(storageDataThemeColor))
+    }
+
+    console.log(storageDataTheme, storageDataThemeColor)
   },[])
 
   return <div id="app-container" className={themeColors[appColor] + (appModeDark ? '-dark' : '')}>

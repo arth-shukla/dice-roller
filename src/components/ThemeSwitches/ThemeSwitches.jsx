@@ -14,7 +14,7 @@ function ThemeSwitch({ changeTheme, darkMode, ...rest }) {
 
 function ColorSwitch({ changeColor, color, ...rest }) {
     return <button 
-        id={(color == 0) ? "default-color-switch" : "pink-color-switch"} 
+        id={(color === 0) ? "default-color-switch" : "pink-color-switch"} 
         class="dark-switch" 
         onClick={changeColor}
         {...rest}
