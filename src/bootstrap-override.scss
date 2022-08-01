@@ -26,6 +26,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--pure-color);
+  overflow-y: auto;
 
   transition: v.$theme-transition;
 }
@@ -56,6 +57,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--pure-color);
+  overflow-y: auto;
 
   transition: v.$theme-transition;
 }
@@ -86,6 +88,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--pure-color);
+  overflow-y: auto;
 
   transition: v.$theme-transition;
 }
