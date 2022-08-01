@@ -80,7 +80,7 @@ $primary-pink: #f25b86;
     --primary-focus-shadow: 242,111,148;
     --alert-color: var(--primary-other);
     --alert-shadow: 242,111,148,.28;
-    --alert-outline: 49,132,253,.4;
+    --alert-outline: 242,111,148,.4;
 }
 @mixin blue {
     --primary: #0d6efd;
@@ -93,7 +93,7 @@ $primary-pink: #f25b86;
 }
 @mixin blue-dark {
     --primary: rgb(0, 122, 204);
-    --primary-hover: #1791e3;
+    --primary-hover: rgb(23, 145, 227);
     --primary-other: var(--primary);
     --primary-focus-shadow: 0, 122, 204;
     --alert-color: var(--primary);
@@ -105,7 +105,7 @@ $primary-pink: #f25b86;
     --primary-hover: rgb(211, 80, 159);
     --primary-other: var(--primary);
     --primary-focus-shadow: 204, 59, 146;
-    --alert-color: (--primary);
+    --alert-color: var(--primary);
     --alert-shadow: none;
     --alert-outline: var(--primary-focus-shadow);
 
