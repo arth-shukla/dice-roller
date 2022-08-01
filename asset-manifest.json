@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dice-roller/static/css/main.6d08322d.css",
-    "main.js": "/dice-roller/static/js/main.e1ea6369.js",
+    "main.css": "/dice-roller/static/css/main.7a7601ab.css",
+    "main.js": "/dice-roller/static/js/main.00538489.js",
     "static/js/787.035206b4.chunk.js": "/dice-roller/static/js/787.035206b4.chunk.js",
     "index.html": "/dice-roller/index.html",
-    "main.6d08322d.css.map": "/dice-roller/static/css/main.6d08322d.css.map",
-    "main.e1ea6369.js.map": "/dice-roller/static/js/main.e1ea6369.js.map",
+    "main.7a7601ab.css.map": "/dice-roller/static/css/main.7a7601ab.css.map",
+    "main.00538489.js.map": "/dice-roller/static/js/main.00538489.js.map",
     "787.035206b4.chunk.js.map": "/dice-roller/static/js/787.035206b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d08322d.css",
-    "static/js/main.e1ea6369.js"
+    "static/css/main.7a7601ab.css",
+    "static/js/main.00538489.js"
   ]
 }
