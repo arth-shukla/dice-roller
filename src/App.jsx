@@ -29,7 +29,7 @@ function App() {
     }
   },[])
 
-  return <div id="app-container" className={appModeDark ? 'app-dark' : appAltColor ? 'app-pink' : 'app-light'}>
+  return <div id="app-container" className={appModeDark ? 'blue-dark' : appAltColor ? 'pink' : 'blue'}>
     <header>
       <h1>Dice Roller</h1>
       <Stack className="theme-controls" direction="horizontal" gap={3}>

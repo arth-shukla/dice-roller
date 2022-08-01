@@ -3,7 +3,7 @@
 @media (prefers-color-scheme: light) {
   body {
     background-color: #fff !important;
-    @include v.light-theme("startup", blue);
+    @include v.light-theme("startup");
     @include v.override-bootstrap;
 
     color: var(--primary) !important;
@@ -23,28 +23,26 @@
 :root[data-theme="light"] {
   body {
     background-color: #fff !important;
-    transition: v.$theme-transition;
-    @include v.light-theme("running", blue)
+    @include v.light-theme("running")
   }
 }
 :root[data-theme="dark"] {
   body {
     background-color: #121212 !important;
-    transition: v.$theme-transition;
     @include v.dark-theme("running");
   }
 }
 
-.app-light {
-  @include v.theme-color("running", blue);
+.blue {
+  @include v.theme-color(blue);
 }
 
-.app-pink {
-  @include v.theme-color("running", pink);
+.pink {
+  @include v.theme-color(pink);
 }
 
-.app-dark {
-  @include v.theme-color("running", "blue-dark");
+.blue-dark {
+  @include v.theme-color("blue-dark");
 }
 
 @include v.override-bootstrap;
@@ -104,3 +102,4 @@ footer {
   order: 2;
   display: inline-block;
 }
+

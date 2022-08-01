@@ -1,7 +1,7 @@
 
 $tr-sec: .4s;
 
-$theme-transition: color $tr-sec ease-in-out,background-color $tr-sec ease-in-out,border-color $tr-sec ease-in-out,box-shadow $tr-sec ease-in-out, outline $tr-sec ease-in-out, border $tr-sec ease-in-out;
+$theme-transition: color $tr-sec ease-in-out,background-color $tr-sec ease-in-out,border-color $tr-sec ease-in-out,box-shadow $tr-sec ease-in-out, outline $tr-sec ease-in-out, border $tr-sec ease-in-out, stroke $tr-sec ease-in-out, fill $tr-sec ease-in-out;
 
 $display-width: 100%;
 
@@ -16,7 +16,7 @@ $bg-anim-color-light: rgba(18, 18, 18, .8);
 $primary-light: #0d6efd;
 $primary-pink: #f25b86;
 
-@mixin light-theme($app-state, $theme-color) {
+@mixin light-theme($app-state) {
     @include blue;
 
     --input-border-size: 1px;
@@ -59,7 +59,7 @@ $primary-pink: #f25b86;
     }
 }
 
-@mixin theme-color($app-state, $theme-color) {
+@mixin theme-color($theme-color) {
     @if $theme-color == pink {
         @include pink;
     } @else if $theme-color == "blue-dark" {
@@ -68,11 +68,7 @@ $primary-pink: #f25b86;
         @include blue;
     } 
 
-    @if $app-state == "startup" {
-        transition: none;
-    } @else {
-        transition: $theme-transition;
-    }
+    transition: $theme-transition;
 }
 
 @mixin pink {
