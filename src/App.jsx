@@ -21,8 +21,6 @@ function App() {
     document.documentElement.setAttribute("data-theme", temp ? "dark" : "light")
     window.localStorage.setItem('data-theme', temp ? "dark" : "light");
     setAppModeDark(temp)
-
-    console.log(appColor, temp)
   }
 
   const changeColor = () => {
@@ -30,8 +28,6 @@ function App() {
     document.documentElement.setAttribute("data-theme-color", themeColors[temp])
     window.localStorage.setItem('data-theme-color', themeColors[temp]);
     setAppColor(temp)
-
-    console.log(temp, appModeDark)
   }
 
   useEffect(() => {
@@ -53,8 +49,8 @@ function App() {
     <header>
       <h1>Dice Roller</h1>
       <Stack className="theme-controls" direction="horizontal" gap={3}>
-        <ColorSwitch color={appColor} changeColor={changeColor} />
-        <ThemeSwitch darkMode={appModeDark} changeTheme={changeTheme} />
+        <ColorSwitch key="dark-switch" color={appColor} changeColor={changeColor} />
+        <ThemeSwitch key="color-switch" darkMode={appModeDark} changeTheme={changeTheme} />
       </Stack>
     </header>
     <content>

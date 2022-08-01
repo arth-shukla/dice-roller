@@ -33,8 +33,8 @@
   }
 }
 
-.blue { @include v.theme-color(blue); }
-.pink { @include v.theme-color(pink); }
+.blue { @include v.theme-color("blue"); }
+.pink { @include v.theme-color("pink"); }
 .blue-dark { @include v.theme-color("blue-dark"); }
 .pink-dark { @include v.theme-color("pink-dark"); }
 

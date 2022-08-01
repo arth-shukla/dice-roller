@@ -1,6 +1,6 @@
 import './DiceImages.scss'
 
-function DiceImage(props) {
+function DiceImage({ dice, ...rest }) {
 
     const diceSVGs = {
         "d4": <svg className="dice-image" width="54" height="49">
@@ -47,7 +47,7 @@ function DiceImage(props) {
         </svg>
     }
 
-    return <div style={{width:"50px", display: "inline-block"}}>{diceSVGs[props.dice]}</div>
+    return <div {...rest} style={{width:"50px", display: "inline-block"}}>{diceSVGs[dice]}</div>
 }
 
 export default DiceImage

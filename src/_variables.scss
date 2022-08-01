@@ -9,7 +9,8 @@ $bg-dark-main: #121212;
 $bg-light-main: #fff;
 $bg-light-header: #e1dfe3;
 
-$theme-anim-size: 24px;
+$theme-anim-size: 30px;
+$theme-anim-color-size: 24px;
 
 $bg-anim-color-light: rgba(18, 18, 18, .8);
 
@@ -22,7 +23,7 @@ $primary-pink: #f25b86;
     --input-border-size: 1px;
     --bg-main: #fff;
     --bg-header: #e1dfe3;
-    --outline-header: none;
+    --outline-header: var(--bg-header);
     --bg-cell: #fafafa;
     --bg-input: #e9ecef;
     --outline: rgb(200,200,200);
@@ -30,6 +31,7 @@ $primary-pink: #f25b86;
     --text-med-em: var(--text);
     --text-low-em: #212529;
     --pure-color: #fff;
+    --theme-anim: rgba(18, 18, 18, .8);
     
     @if $app-state == "startup" {
         transition: none;
@@ -52,6 +54,7 @@ $primary-pink: #f25b86;
     --text-med-em: rgba(255, 255, 255, .6);
     --text-low-em: rgba(255, 255, 255, .38);
     --pure-color: #121212;
+    --theme-anim: rgba(170,179,186);
     
     @if $app-state == "startup" {
         transition: none;
@@ -61,7 +64,7 @@ $primary-pink: #f25b86;
 }
 
 @mixin theme-color($theme-color) {
-    @if $theme-color == pink {
+    @if $theme-color == "pink" {
         @include pink;
     } @else if $theme-color == "blue-dark" {
         @include blue-dark;
