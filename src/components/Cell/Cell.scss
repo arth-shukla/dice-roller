@@ -1,7 +1,7 @@
 @use '../../variables' as v;
 
 .cell {
-    outline: 1px solid var(--outline);
+    border: 1px solid var(--outline);
     border-radius: 10px;
     background: var(--bg-cell);
 
