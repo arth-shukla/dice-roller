@@ -1,0 +1,17 @@
+
+$tr-sec: .5s;
+
+$theme-transition: color $tr-sec ease-in-out,background-color $tr-sec ease-in-out,border-color $tr-sec ease-in-out,box-shadow $tr-sec ease-in-out, outline $tr-sec ease-in-out, border $tr-sec ease-in-out;
+
+$display-width: 100%;
+
+$bg-dark-main: #121212;
+$bg-light-main: #fff;
+$bg-light-header: #e1dfe3;
+
+$theme-anim-size: 24px;
+
+$bg-anim-color-light: rgba(18, 18, 18, .8);
+
+$primary-light: #0d6efd;
+$primary-pink: #f25b86;

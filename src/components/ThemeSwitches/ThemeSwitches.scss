@@ -1,0 +1,65 @@
+@use '../../variables' as v;
+
+.dark-switch {
+    border: none;
+    background-color: inherit;
+    margin: .25em 0;
+    width: v.$theme-anim-size;
+    height: v.$theme-anim-size;
+    padding: 0;
+
+    #targ {
+        width: v.$theme-anim-size;
+        height: v.$theme-anim-size;
+        border-radius: 50%;
+        transition: all v.$tr-sec ease-in-out;
+    }
+    #cover {
+        width: v.$theme-anim-size;
+        height: v.$theme-anim-size;
+        border-radius: 50%;
+        transition: all v.$tr-sec ease-in-out;
+    }
+}
+
+#sun-dark-switch #targ {
+    border: calc(v.$theme-anim-size/2) solid v.$bg-anim-color-light;
+}
+#sun-dark-switch #cover {
+    background: var(--bg-header);
+    transform: translate(30px,-40px);
+}
+
+#moon-dark-switch #targ {
+    background: v.$bg-light-header;
+    border: 1px solid v.$bg-light-header;
+}
+#moon-dark-switch #cover {
+    background: var(--bg-header);
+    transform: translate(7px,-32px);
+}
+
+.color-switch {
+    border: none;
+    background-color: inherit;
+    margin: .25em 0;
+    width: v.$theme-anim-size;
+    height: v.$theme-anim-size;
+    padding: 0;
+
+    #targ {
+        width: v.$theme-anim-size;
+        height: v.$theme-anim-size;
+        border-radius: 50%;
+        transition: all v.$tr-sec ease-in-out;
+    }
+}
+
+#pink-color-switch #targ {
+    background-color: v.$primary-light;
+    border: 1px solid v.$primary-light;
+}
+
+#default-color-switch #targ {
+    border: calc(v.$theme-anim-size/2) solid v.$primary-pink;
+}

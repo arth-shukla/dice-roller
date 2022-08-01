@@ -1,72 +1,7 @@
+@use './variables' as v;
 
-:root {
-  --100-width: 100%;
-}
 ::selection {
   background: rgba(var(--primary-focus-shadow), .5);
-}
-
-.app-light {
-  --primary: #0d6efd;
-  --primary-hover: #0b5ed7;
-  --primary-other: #0a58ca;
-  --primary-focus-shadow: 49,132,253;
-  --input-border-size: 1px;
-  --alert-color: var(--primary-other);
-  --alert-shadow: 49,132,253,.28;
-  --alert-outline: 49,132,253,.4;
-  --bg-main: #000;
-  --bg-header: #e1dfe3;
-  --outline-header: none;
-  --bg-cell: #fafafa;
-  --bg-input: #e9ecef;
-  --outline: rgb(200,200,200);
-  --text: #000;
-  --text-med-em: #212529;
-  --text-low-em: var(--text);
-  --pure-color: #fff;
-}
-
-.app-pink {
-  --primary: #f25b86;
-  --primary-hover: #db5178;
-  --primary-other: #c4496c;
-  --primary-focus-shadow: 242,111,148;
-  --input-border-size: 1px;
-  --alert-color: var(--primary-other);
-  --alert-shadow: 242,111,148,.28;
-  --alert-outline: 242,111,148,.4;
-  --bg-main: #000;
-  --bg-header: #e1dfe3;
-  --outline-header: none;
-  --bg-cell: #fafafa;
-  --bg-input: #e9ecef;
-  --outline: rgb(200,200,200);
-  --text: #000;
-  --text-med-em: #212529;
-  --text-low-em: var(--text);
-  --pure-color: #fff;
-}
-
-.app-dark {
-  --primary: #007acc;
-  --primary-hover: #1791e3;
-  --primary-other: var(--primary);
-  // --primary-focus-shadow: 49,132,253;
-  --input-border-size: 2px;
-  --alert-color: var(--primary);
-  // --alert-shadow: 49,132,253,.28;
-  --alert-outline: 0, 122, 204;
-  --bg-main: #121212;
-  --bg-header: var(--bg-main);
-  --outline-header: #2d2d30;
-  --bg-cell: rgba(45,45,48,.4);
-  --bg-input: #2d2d30;
-  --outline: #121212;
-  --text: rgba(255, 255, 255, .87);
-  --text-med-em: rgba(255, 255, 255, .6);
-  --text-low-em: rgba(255, 255, 255, .38);
-  --pure-color: #121212;
 }
 
 header {
@@ -80,15 +15,18 @@ header {
   position: absolute;
   top:0;
   height: 50px;
-  width: var(--100-width) !important;
+  width: 100% !important;
   z-index:100;
 
   overflow: hidden;
   white-space: nowrap;
-}
 
+  transition: v.$theme-transition;
+
+  display: flex;
+}
 header h1 {
-  margin: 0 .5em 0;
+  margin-left: .5em;
   font-size: calc(50px - 1.5em);
 }
 
@@ -101,7 +39,7 @@ footer {
   position: fixed;
   bottom: 0;
   height: 40px;
-  width: var(--100-width) !important;
+  width: 100% !important;
 
   background-color: #282c34;
   color: white;
@@ -110,4 +48,10 @@ footer {
 
   overflow: hidden;
   white-space: nowrap;
+}
+
+.theme-controls {
+  margin: auto 13px auto auto !important;
+  order: 2;
+  display: inline-block;
 }

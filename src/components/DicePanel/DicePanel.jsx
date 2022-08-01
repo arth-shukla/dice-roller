@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Alert, Button, Stack, InputGroup, Form, ButtonGroup } from 'react-bootstrap';
-import DiceImage from '../../assets/DiceImage'
+import DiceImage from '../DiceImages/DiceImage'
 import Cell from '../Cell/Cell'
 import './DicePanel.scss'
 

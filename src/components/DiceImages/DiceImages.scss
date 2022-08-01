@@ -1,0 +1,15 @@
+@use '../../variables' as v;
+
+.dice-image-poly {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 3;
+    transition: stroke v.$tr-sec ease-in-out;
+}
+
+.dice-image-text {
+    fill: var(--primary);
+    font-weight: bold;
+    font: sans-serif;
+    transition: fill v.$tr-sec ease-in-out;
+}
