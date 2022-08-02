@@ -5,18 +5,29 @@
     background-color: inherit;
     margin: .25em 0;
     padding: 0;
+
+    width: v.$theme-anim-size;
+    height: v.$theme-anim-size;
+}
+.switch:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow:none
+}
+.switch:focus {
+    outline: none;
+    border-radius: .25rem;
+    box-shadow: 0 0 0 .2rem rgba(var(--primary-focus-shadow), .5);
+    transition: v.$theme-transition;
 }
 
 .color-switch {
-    width: v.$theme-anim-color-size;
-    height: v.$theme-anim-color-size;
-
     .targ {
         width: v.$theme-anim-color-size;
         height: v.$theme-anim-color-size;
         border-radius: 50%;
         transition: all v.$tr-sec ease-in-out;
         pointer-events: none;
+        margin:auto;
     }
     #targ-pink {
         
@@ -29,16 +40,8 @@
     }
 }
 
-.dark-switch {
-    width: v.$theme-anim-size;
-    height: v.$theme-anim-size;
-
-    > svg {
-        transition: all v.$tr-sec ease-in-out;
-    }
-}
-
 svg {
+    transition: all v.$tr-sec ease-in-out;
     
     #moon {
         fill: var(--theme-anim);

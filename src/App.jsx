@@ -48,7 +48,7 @@ function App() {
   return <div id="app-container" className={themeColors[appColor] + (appModeDark ? '-dark' : '')}>
     <header>
       <h1>Dice Roller</h1>
-      <Stack className="theme-controls" direction="horizontal" gap={3}>
+      <Stack className="theme-controls" direction="horizontal" gap={1}>
         <ColorSwitch 
           key="dark-switch"
           color={appColor}
@@ -69,7 +69,7 @@ function App() {
       <div className='roller-ui'>
         <Roller>
           {[4, 6, 8, 10, 12, 20].map((diceNum) => {
-            return <DicePanel tabindex={0} id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
+            return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
           })}
         </Roller>
         <RollHistory rolls={rolls} />

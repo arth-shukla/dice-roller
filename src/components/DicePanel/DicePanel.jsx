@@ -64,7 +64,6 @@ function DicePanel(props) {
         </Stack>
         <Stack direction="horizontal" gap={3}>
             <Alert
-                tabindex={rolls ? 0 : -1}
                 aria-label={`You rolled ${rolls}.`}
                 size="sm"
                 key='info'

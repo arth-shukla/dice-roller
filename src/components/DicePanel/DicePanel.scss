@@ -8,6 +8,10 @@
 
     transition: v.$theme-transition
 }
+.dice-pane:focus {
+    outline: none;
+    box-shadow: 0 0 0 .2rem rgba(var(--primary-focus-shadow), .5);
+}
 .roll-buttons-container {
     width: 100%;
 
