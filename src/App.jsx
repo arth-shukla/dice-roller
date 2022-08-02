@@ -49,15 +49,27 @@ function App() {
     <header>
       <h1>Dice Roller</h1>
       <Stack className="theme-controls" direction="horizontal" gap={3}>
-        <ColorSwitch key="dark-switch" color={appColor} changeColor={changeColor} />
-        <ThemeSwitch key="color-switch" darkMode={appModeDark} changeTheme={changeTheme} />
+        <ColorSwitch 
+          key="dark-switch"
+          color={appColor}
+          changeColor={changeColor}
+          aria-label={`Switch app color theme to ${themeColors[(appColor + 1) % 2]}.`}
+          aria-live="polite"
+        />
+        <ThemeSwitch 
+          key="color-switch"
+          darkMode={appModeDark}
+          changeTheme={changeTheme}
+          aria-label={`Switch app to ${appModeDark ? 'light' : 'dark'} mode.`}
+          aria-live="polite"
+        />
       </Stack>
     </header>
     <content>
       <div className='roller-ui'>
         <Roller>
           {[4, 6, 8, 10, 12, 20].map((diceNum) => {
-            return <DicePanel id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
+            return <DicePanel tabindex={0} id={`d${diceNum}`} dice={`d${diceNum}`} diceNum={diceNum} addRoll={addRoll} />
           })}
         </Roller>
         <RollHistory rolls={rolls} />
