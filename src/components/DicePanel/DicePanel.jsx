@@ -102,7 +102,7 @@ function DicePanel(props) {
                     buttonText='Roll'
                     variant="primary"
                     addRoll={props.addRoll}
-                    aria-live={`Select this button to roll ${customRolls}${props.dice}.`}
+                    aria-label={`Select this button to roll ${customRolls}${props.dice}.`}
                 />
             </Stack>
         </Stack>
