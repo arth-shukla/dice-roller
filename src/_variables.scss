@@ -1,7 +1,8 @@
 
 $tr-sec: .4s;
+$alert-display-sec: .15s;
 
-$theme-transition: color $tr-sec ease-in-out,background-color $tr-sec ease-in-out,border-color $tr-sec ease-in-out,box-shadow $tr-sec ease-in-out, outline $tr-sec ease-in-out, border $tr-sec ease-in-out, stroke $tr-sec ease-in-out, fill $tr-sec ease-in-out;
+$theme-transition: color $tr-sec ease-in-out,background-color $tr-sec ease-in-out,border-color $tr-sec ease-in-out,box-shadow $tr-sec ease-in-out, outline $tr-sec ease-in-out, border $tr-sec ease-in-out, stroke $tr-sec ease-in-out, fill $tr-sec ease-in-out, opacity $alert-display-sec linear;
 
 $display-width: 100%;
 
