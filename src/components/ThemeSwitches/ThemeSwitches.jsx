@@ -4,7 +4,7 @@ function ThemeSwitch({ changeTheme, darkMode, ...rest }) {
     return <button 
         id={darkMode ? "moon-dark-switch" : "sun-dark-switch"}
         class="switch dark-switch"
-        onClick={() => { console.log('dark'); changeTheme() }}
+        onClick={changeTheme}
         {...rest}
     >
         <svg width="30" height="30" viewBox='0 0 30 30' aria-hidden={true}>
@@ -38,7 +38,7 @@ function ThemeSwitch({ changeTheme, darkMode, ...rest }) {
 function ColorSwitch({ changeColor, color, ...rest }) {
     return <button 
         class="switch color-switch" 
-        onClick={() => { console.log('color'); changeColor() }}
+        onClick={changeColor}
         {...rest}
     >
         <div aria-hidden={true} key="color-switch-targ" id={'targ-' + ((color === 0) ? 'default' : 'pink')} className='targ'></div>
