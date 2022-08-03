@@ -37,7 +37,7 @@ function ThemeSwitch({ changeTheme, darkMode, ...rest }) {
 
 function ColorSwitch({ changeColor, color, ...rest }) {
     return <button 
-        class="switch color-switch" 
+        className="switch color-switch" 
         onClick={changeColor}
         {...rest}
     >
