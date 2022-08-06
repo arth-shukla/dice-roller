@@ -99,12 +99,15 @@ function DicePanel(props) {
 					key='info'
 					variant='info'
 					style={{ opacity: rolls ? 100 : 0 }}
+					aria-hidden={rolls.length === 0}
+					aria-describedby={`${props.dice}-desc`}
 				>
 					{rolls}
 				</Alert>
 				<details
 					class='sr-only'
 					tabIndex={-1}
+					id={`${props.dice}-desc`}
 				>
 					<summary>More Information</summary>
 					See the "Roll History" table at the bottom of the page for more information.
