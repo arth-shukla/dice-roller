@@ -15,8 +15,10 @@ $theme-anim-color-size: 24px;
 
 $bg-anim-color-light: rgba(18, 18, 18, 0.8);
 
-$primary-light: #0d6efd;
+$primary-blue: #0d6efd;
 $primary-pink: #f25b86;
+$primary-blue-dark: rgb(27, 138, 212);
+$primary-pink-dark: rgb(215, 84, 163);
 
 @mixin light-theme($app-state) {
 	@include blue;
@@ -91,9 +93,6 @@ $primary-pink: #f25b86;
 	--primary: #066aff;
 	--primary-hover: #0b5ed7;
 	--primary-other: #0a58ca;
-	// --primary: #0d6efd;
-	// --primary-hover: #0b5ed7;
-	// --primary-other: #0a58ca;
 	--primary-focus-shadow: 49, 132, 253;
 	--alert-color: var(--primary-other);
 	--alert-shadow: 49, 132, 253, 0.28;

@@ -62,7 +62,7 @@ function App() {
 						color={appColor}
 						colors={Array(2).fill('var(--primary)')}
 						onClick={changeColor}
-						aria-label={`Switch app color theme to ${themeColors[appColor]}.`}
+						aria-label={`Switch app color theme to ${themeColors[(appColor + 1) % themeColors.length]}.`}
 						aria-live='polite'
 					/>
 					<DarkModeSwitch
@@ -90,9 +90,6 @@ function App() {
 					<RollHistory rolls={rolls} />
 				</div>
 			</content>
-			{/* <footer>
-      Authored by Arth Shukla
-    </footer> */}
 		</div>
 	)
 }
