@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ColorSwitch } from '@arth-shukla/my-icons'
+import { ColorSwitch, DarkModeSwitch } from '@arth-shukla/my-icons'
 import Roller from './components/Roller/Roller'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
@@ -22,7 +22,7 @@ function App() {
 		let temp = !appModeDark
 		document.documentElement.setAttribute('data-theme', temp ? 'dark' : 'light')
 		window.localStorage.setItem('data-theme', temp ? 'dark' : 'light')
-		setAppModeDark(temp)
+		setAppModeDark(!appModeDark)
 	}
 
 	const changeColor = () => {
@@ -65,13 +65,12 @@ function App() {
 						aria-label={`Switch app color theme to ${themeColors[appColor]}.`}
 						aria-live='polite'
 					/>
-					{/* <ThemeSwitch
-						key='color-switch'
+					<DarkModeSwitch
 						darkMode={appModeDark}
-						changeTheme={changeTheme}
+						onClick={changeTheme}
 						aria-label={`Switch app to ${appModeDark ? 'light' : 'dark'} mode.`}
 						aria-live='polite'
-					/> */}
+					/>
 				</Stack>
 			</header>
 			<content>
