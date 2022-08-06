@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ColorSwitch, ThemeSwitch } from './components/ThemeSwitches/ThemeSwitches'
+import { ColorSwitch, DarkModeSwtich } from '@arth-shukla/my-icons'
 import Roller from './components/Roller/Roller'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
@@ -58,7 +58,7 @@ function App() {
 					direction='horizontal'
 					gap={1}
 				>
-					<ColorSwitch
+					{/* <ColorSwitch
 						key='dark-switch'
 						color={appColor}
 						changeColor={changeColor}
@@ -71,7 +71,7 @@ function App() {
 						changeTheme={changeTheme}
 						aria-label={`Switch app to ${appModeDark ? 'light' : 'dark'} mode.`}
 						aria-live='polite'
-					/>
+					/> */}
 				</Stack>
 			</header>
 			<content>
