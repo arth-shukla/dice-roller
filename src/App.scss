@@ -1,98 +1,105 @@
 @use './variables' as v;
 
 ::selection {
-  background: rgba(var(--primary-focus-shadow), .5);
+	background: rgba(var(--primary-focus-shadow), 0.5);
 }
 
 @media (prefers-color-scheme: light) {
-  body {
-    background-color: #fff !important;
-    @include v.light-theme("startup");
-    @include v.override-bootstrap;
-  }
-  
+	body {
+		background-color: #fff !important;
+		@include v.light-theme('startup');
+		@include v.override-bootstrap;
+	}
 }
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212 !important;
-    @include v.dark-theme("startup");
-    @include v.override-bootstrap;
-  }
+	body {
+		background-color: #121212 !important;
+		@include v.dark-theme('startup');
+		@include v.override-bootstrap;
+	}
 }
 
-:root[data-theme="light"] {
-  body {
-    background-color: #fff !important;
-    @include v.light-theme("running")
-  }
+:root[data-theme='light'] {
+	body {
+		background-color: #fff !important;
+		@include v.light-theme('running');
+	}
 }
-:root[data-theme="dark"] {
-  body {
-    background-color: #121212 !important;
-    @include v.dark-theme("running");
-  }
+:root[data-theme='dark'] {
+	body {
+		background-color: #121212 !important;
+		@include v.dark-theme('running');
+	}
 }
 
-.blue { @include v.theme-color("blue"); }
-.pink { @include v.theme-color("pink"); }
-.blue-dark { @include v.theme-color("blue-dark"); }
-.pink-dark { @include v.theme-color("pink-dark"); }
+.blue {
+	@include v.theme-color('blue');
+}
+.pink {
+	@include v.theme-color('pink');
+}
+.blue-dark {
+	@include v.theme-color('blue-dark');
+}
+.pink-dark {
+	@include v.theme-color('pink-dark');
+}
 
 header {
-  background-color: var(--bg-header);
-  color: var(--text);
-  padding: 0;
+	background-color: var(--bg-header);
+	color: var(--text);
+	padding: 0;
 
-  width: var(--100-width);
+	width: var(--100-width);
 
-  border-bottom: 1px solid var(--outline-header);
+	border-bottom: 1px solid var(--outline-header);
 
-  overflow: hidden;
-  white-space: nowrap;
+	overflow: hidden;
+	white-space: nowrap;
 
-  transition: v.$theme-transition;
+	transition: v.$theme-transition;
 
-  display: flex;
+	display: flex;
 }
 header h1 {
-  margin-left: .5em;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: calc(50px - 1.5em);
+	margin-left: 0.5em;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: calc(50px - 1.5em);
 }
 
 .roller-ui {
-  padding: 10px;
+	padding: 10px;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  height: 40px;
-  width: 100% !important;
+	position: fixed;
+	bottom: 0;
+	height: 40px;
+	width: 100% !important;
 
-  background-color: #282c34;
-  color: white;
-  text-align: center;
-  padding: .5em 0;
+	background-color: #282c34;
+	color: white;
+	text-align: center;
+	padding: 0.5em 0;
 
-  overflow: hidden;
-  white-space: nowrap;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .theme-controls {
-  margin: auto 13px auto auto !important;
-  order: 2;
-  display: inline-block;
+	margin: auto 13px auto auto !important;
+	order: 2;
+	display: inline-block;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }

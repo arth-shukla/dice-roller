@@ -1,24 +1,24 @@
 @use '../../variables' as v;
 
 .roll-history {
-    padding: 1em;
-    margin: 10px auto auto auto;
-    max-height: 500px;
-    max-width: 800px;
-    overflow-y: auto;
-    width: var(--100-width);
-    color: var(--text-med-em);
+	padding: 1em;
+	margin: 10px auto auto auto;
+	max-height: 500px;
+	max-width: 800px;
+	overflow-y: auto;
+	width: var(--100-width);
+	color: var(--text-med-em);
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
 
 .roll-table {
-    color: var(--text-med-em) !important;
+	color: var(--text-med-em) !important;
 
-    transition: v.$theme-transition;
+	transition: v.$theme-transition;
 }
 
 .table-roll {
-    white-space: nowrap;
-    width: 90%;
+	white-space: nowrap;
+	width: 90%;
 }

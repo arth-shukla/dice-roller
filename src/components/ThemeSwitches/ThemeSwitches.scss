@@ -1,105 +1,116 @@
 @use '../../variables' as v;
 
 .switch {
-    border: none;
-    background-color: inherit;
-    margin: .25em 0;
-    padding: 0;
+	border: none;
+	background-color: inherit;
+	margin: 0.25em 0;
+	padding: 0;
 
-    width: v.$theme-anim-size;
-    height: v.$theme-anim-size;
+	width: v.$theme-anim-size;
+	height: v.$theme-anim-size;
 }
 .switch:focus:not(:focus-visible) {
-    outline: none;
-    box-shadow:none
+	outline: none;
+	box-shadow: none;
 }
 .switch:focus {
-    outline: none;
-    border-radius: .25rem;
-    box-shadow: 0 0 0 .2rem rgba(var(--primary-focus-shadow), .5);
-    transition: v.$theme-transition;
+	outline: none;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 0 0.2rem rgba(var(--primary-focus-shadow), 0.5);
+	transition: v.$theme-transition;
 }
 
 .color-switch {
-    .targ {
-        width: v.$theme-anim-color-size;
-        height: v.$theme-anim-color-size;
-        border-radius: 50%;
-        transition: all v.$tr-sec ease-in-out;
-        pointer-events: none;
-        margin:auto;
-    }
-    #targ-pink {
-        
-        background-color: var(--primary);
-        border: 1px solid var(--primary);
-    }
-    
-    #targ-default {
-        border: calc(v.$theme-anim-color-size/2) solid var(--primary);
-    }
+	.targ {
+		width: v.$theme-anim-color-size;
+		height: v.$theme-anim-color-size;
+		border-radius: 50%;
+		transition: all v.$tr-sec ease-in-out;
+		pointer-events: none;
+		margin: auto;
+	}
+	#targ-pink {
+		background-color: var(--primary);
+		border: 1px solid var(--primary);
+	}
+
+	#targ-default {
+		border: calc(v.$theme-anim-color-size/2) solid var(--primary);
+	}
 }
 
 svg {
-    transition: all v.$tr-sec ease-in-out;
-    
-    #moon {
-        fill: var(--theme-anim);
-        transition: all v.$tr-sec ease-in-out;
-    }
-    #moon-mask {        
-        > circle {
-            fill: #000;//var(--theme-anim);
-            transition: all v.$tr-sec ease-in-out;
-        }
-    
-        > rect {
-            fill: #fff;//var(--bg-header);
-            transition: all v.$tr-sec ease-in-out;
-        }
-    }
+	transition: all v.$tr-sec ease-in-out;
 
-    g > circle {
-        fill: var(--theme-anim);
-        transform: none;
-        transition: all v.$tr-sec ease-in-out;
-    }
-    #dots-mask {
-        > circle {
-            fill: #000;
-            transition: all v.$tr-sec ease-in-out;
-        }
+	#moon {
+		fill: var(--theme-anim);
+		transition: all v.$tr-sec ease-in-out;
+	}
+	#moon-mask {
+		> circle {
+			fill: #000; //var(--theme-anim);
+			transition: all v.$tr-sec ease-in-out;
+		}
 
-        > rect {
-            fill: #fff;
-            transition: all v.$tr-sec ease-in-out;
-        }
-    }
+		> rect {
+			fill: #fff; //var(--bg-header);
+			transition: all v.$tr-sec ease-in-out;
+		}
+	}
+
+	g > circle {
+		fill: var(--theme-anim);
+		transform: none;
+		transition: all v.$tr-sec ease-in-out;
+	}
+	#dots-mask {
+		> circle {
+			fill: #000;
+			transition: all v.$tr-sec ease-in-out;
+		}
+
+		> rect {
+			fill: #fff;
+			transition: all v.$tr-sec ease-in-out;
+		}
+	}
 }
-#sun-dark-switch{ 
-    svg {
-        transform: rotate(90deg);
+#sun-dark-switch {
+	svg {
+		transform: rotate(90deg);
 
-        #moon-mask > circle {
-            transform: translateX(15px);
-        }
-    }
+		#moon-mask > circle {
+			transform: translateX(15px);
+		}
+	}
 }
-#moon-dark-switch { 
-    svg { 
-        transform: rotate(-45deg);
+#moon-dark-switch {
+	svg {
+		transform: rotate(-45deg);
 
-        #moon-mask > circle {
-            transform: translateX(0);
-        }
-    
-        > g {
-            #spot-1 { transform: translate(12px, 0); }
-            #spot-2 { transform: translate(6px, -10.4px); }
-            #spot-3 { transform: translate(-6px, -10.4px); }
-            #spot-4 { transform: translate(6px, 10.4px); }
-            #spot-5 { transform: translate(-6px, 10.4px); }
-            #spot-6 { transform: translate(-12px, 0); }
-        }
-    }
+		#moon-mask > circle {
+			transform: translateX(0);
+		}
+
+		> g {
+			#spot-1 {
+				transform: translate(12px, 0);
+			}
+			#spot-2 {
+				transform: translate(6px, -10.4px);
+			}
+			#spot-3 {
+				transform: translate(-6px, -10.4px);
+			}
+			#spot-4 {
+				transform: translate(6px, 10.4px);
+			}
+			#spot-5 {
+				transform: translate(-6px, 10.4px);
+			}
+			#spot-6 {
+				transform: translate(-12px, 0);
+			}
+		}
+	}
 }
