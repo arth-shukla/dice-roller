@@ -1,49 +1,49 @@
 @use '../../variables' as v;
 
 .dice-pane {
-    width: calc(285px + 3em);
-    max-width: 100%;
-    margin: 0 auto 1em;
-    padding: 1em 1.5em;
+	width: calc(285px + 3em);
+	max-width: 100%;
+	margin: 0 auto 1em;
+	padding: 1em 1.5em;
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
 .dice-pane:focus {
-    outline: none;
-    box-shadow: 0 0 0 .2rem rgba(var(--primary-focus-shadow), .5);
+	outline: none;
+	box-shadow: 0 0 0 0.2rem rgba(var(--primary-focus-shadow), 0.5);
 }
 .roll-buttons-container {
-    width: 100%;
+	width: 100%;
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
 .roll-controls {
-    margin: 5px 0 10px;
+	margin: 5px 0 10px;
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
 .roll-button {
-    width: 53.5px;
-    /* height: 40px; */
+	width: 53.5px;
+	/* height: 40px; */
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
 .custom-roll-val {
-    width: 66px !important;
-    /* height: 40px; */
+	width: 66px !important;
+	/* height: 40px; */
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
 .alert {
-    padding: .5em !important;
-    text-align: center;
-    height: 42px;
-    width: 100%;
-    margin: auto !important;
-    /* overflow-x: scroll;
+	padding: 0.5em !important;
+	text-align: center;
+	height: 42px;
+	width: 100%;
+	margin: auto !important;
+	/* overflow-x: scroll;
     overflow-y: hidden; */
-    overflow: hidden;
-    white-space: nowrap;
+	overflow: hidden;
+	white-space: nowrap;
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }

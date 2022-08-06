@@ -1,9 +1,9 @@
 @use '../../variables' as v;
 
 .cell {
-    border: 1px solid var(--outline);
-    border-radius: 10px;
-    background: var(--bg-cell);
+	border: 1px solid var(--outline);
+	border-radius: 10px;
+	background: var(--bg-cell);
 
-    transition: v.$theme-transition
+	transition: v.$theme-transition;
 }
