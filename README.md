@@ -12,10 +12,11 @@ The goal of this dice roller was to
     - Text entry to roll 1-99 die
 2. Roll History pane at bottom shows past rolls and individual dice
 3. Accessible
-    - Supports screenreaders, WCAG 2.1 AA color contrast, keyboard-only use, etc.
+    - Supports screenreaders, WCAG 2.1 AA color contrast, keyboard-only use, 400% zoom, etc.
 4. Dark/Light and Color Themes
     - Dark/light mode
     - Blue and pink color themes
+5. Supports computer, mobile, and tablet web interfaces
 
 # Related Projects
 
