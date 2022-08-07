@@ -103,3 +103,14 @@ footer {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
+.theme-switch:focus:not(:focus-visible) {
+	outline: none;
+	box-shadow: none;
+}
+.theme-switch:focus {
+	outline: none;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 0 0.2rem rgba(var(--primary-focus-shadow), 0.5);
+	transition: v.$theme-transition;
+}

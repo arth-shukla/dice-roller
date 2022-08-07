@@ -60,6 +60,7 @@ function App() {
 				>
 					<ColorSwitch
 						color={appColor}
+						className='theme-switch'
 						colors={Array(2).fill('var(--primary)')}
 						onClick={changeColor}
 						aria-label={`Switch app color theme to ${themeColors[(appColor + 1) % themeColors.length]}.`}
@@ -67,6 +68,7 @@ function App() {
 					/>
 					<DarkModeSwitch
 						darkMode={appModeDark}
+						className='theme-switch'
 						onClick={changeTheme}
 						aria-label={`Switch app to ${appModeDark ? 'light' : 'dark'} mode.`}
 						title={`Switch app to ${appModeDark ? 'light' : 'dark'} mode`}
