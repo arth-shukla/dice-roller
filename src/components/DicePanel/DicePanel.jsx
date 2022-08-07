@@ -40,7 +40,7 @@ function DiceRollButtonGroup({ setRolls, diceNum, addRoll }) {
 								variant='outline-primary'
 								addRoll={addRoll}
 								aria-label={`Roll ${i + 1}d${diceNum}.`}
-								title={`Roll ${i + 1}d${diceNum}.`}
+								title={`Roll ${i + 1}d${diceNum}`}
 							/>
 						)
 					})}
@@ -59,7 +59,7 @@ function DiceRollButtonGroup({ setRolls, diceNum, addRoll }) {
 								variant='outline-primary'
 								addRoll={addRoll}
 								aria-label={`Roll ${i + 5}d${diceNum}.`}
-								title={`Roll ${i + 5}d${diceNum}.`}
+								title={`Roll ${i + 5}d${diceNum}`}
 							/>
 						)
 					})}
@@ -83,7 +83,7 @@ function DicePanel(props) {
 			>
 				<DiceImage
 					aria-label={`A ${props.dice}.`}
-					title={`A ${props.dice}.`}
+					title={`A ${props.dice}`}
 					dice={props.dice}
 				/>
 				<DiceRollButtonGroup
@@ -98,7 +98,7 @@ function DicePanel(props) {
 			>
 				<Alert
 					aria-label={`You rolled ${rolls}.`}
-					title={`You rolled ${rolls}.`}
+					title={rolls.length === 0 ? undefined : `You rolled ${rolls}`}
 					size='sm'
 					key='info'
 					variant='info'
@@ -129,7 +129,7 @@ function DicePanel(props) {
 						<Form.Control
 							placeholder='#'
 							aria-label={`Enter a custom number of ${props.dice} to roll.`}
-							title={`Enter a custom number of ${props.dice} to roll.`}
+							title={`Enter a custom number of ${props.dice} to roll`}
 							value={customRolls}
 							onChange={e => {
 								let val = e.target.value
@@ -148,7 +148,7 @@ function DicePanel(props) {
 						variant='primary'
 						addRoll={props.addRoll}
 						aria-label={`Roll ${customRolls}${props.dice}.`}
-						title={`Roll ${customRolls}${props.dice}.`}
+						title={`Roll ${customRolls}${props.dice}`}
 					/>
 				</Stack>
 			</Stack>

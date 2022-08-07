@@ -63,13 +63,13 @@ function App() {
 						colors={Array(2).fill('var(--primary)')}
 						onClick={changeColor}
 						aria-label={`Switch app color theme to ${themeColors[(appColor + 1) % themeColors.length]}.`}
-						title={`Switch app color theme to ${themeColors[(appColor + 1) % themeColors.length]}.`}
+						title={`Switch app color theme to ${themeColors[(appColor + 1) % themeColors.length]}`}
 					/>
 					<DarkModeSwitch
 						darkMode={appModeDark}
 						onClick={changeTheme}
 						aria-label={`Switch app to ${appModeDark ? 'light' : 'dark'} mode.`}
-						title={`Switch app to ${appModeDark ? 'light' : 'dark'} mode.`}
+						title={`Switch app to ${appModeDark ? 'light' : 'dark'} mode`}
 					/>
 				</Stack>
 			</header>
