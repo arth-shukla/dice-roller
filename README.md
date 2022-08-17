@@ -1,14 +1,26 @@
-# Description
+# Description and Motivation
 
-This Dice Roller was inspired by a lack of efficient, aesthetically pleasing, accessible Dice Rollers online. The gloas are as follows:
+This Dice Roller was inspired by three main flaws I've seen with other online Dice Rollers:
 
-1. <u>Fask and Easy:</u> Rolling a dice should take no more than a quick button press.
-2. <u>Aesthetically Pleasing:</u> The UI should be nice to look at, support light/dark mode, and different color combinations.
-3. <u>Accessible:</u> The website is compatible with WCAG 2.1 AA standards, so anyone can use it for DnD.
+1. **Efficiency**
+    - Problem: Most Dice Rollers have clunky UIs or unnecessary forms; as a result, it takes several button presses to roll a single dice.
+    - Solution: Buttons are available to quickly roll 1-8 of a standard D&D dice set (d4, d6, d8, d10, d12, d20) with a single button press. While this should cover most use cases, the user can also
+      enter a custom number of dice as well.
+2. Aesthetically Pleasing:
+    - Problem: Many Dice roller UIs are unattractive, poorly layed out, or don't support mobile/tablet screens very well. However, the most likely use case for a Dice Roller would be one's
+      phone/tablet!
+    - Solution: Create interface which is
+        - simple,
+        - supports dark/light mode and different color themes, and
+        - supports mobile, tablet, and computer browsers and screen sizes.
+3. Accessibility:
+    - Problem: D&D and TTRPGs shoud be inclusive to everyone, but some websites aren't made with certain accessiblity needs in mind.
+    - Solution: This dice roller is compatible with the Web Content Accessibility Guidelines (WCAG) 2.1 AA standards and uses the ARIA Authoring Practices Guide (APG) as a foundation for more
+      complicated components.
 
 # Features
 
-1. Supports standard DnD Dice set (d4, d6, d8, d10, d12, d20)
+1. Supports standard D&D Dice set (d4, d6, d8, d10, d12, d20)
     - Buttons to quickly roll 1-8 die
     - Text entry to roll 1-99 die
 2. Roll History pane at bottom shows past rolls and individual dice
