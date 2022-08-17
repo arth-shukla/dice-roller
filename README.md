@@ -1,9 +1,10 @@
 # Description
 
-The goal of this dice roller was to
+This Dice Roller was inspired by a lack of efficient, aesthetically pleasing, accessible Dice Rollers online. The gloas are as follows:
 
-1. make it fast and easy to roll any standard number of DnD dice, and
-2. make an aesthetically pleasing, simple UI.
+1. <u>Fask and Easy:</u> Rolling a dice should take no more than a quick button press.
+2. <u>Aesthetically Pleasing:</u> The UI should be nice to look at, support light/dark mode, and different color combinations.
+3. <u>Accessible:</u> The website is compatible with WCAG 2.1 AA standards, so anyone can use it for DnD.
 
 # Features
 
@@ -23,3 +24,7 @@ The goal of this dice roller was to
 The Dark Mode and Color Switch buttons are taken from my library https://github.com/arth-shukla/my-icons.
 
 Demos and documentation for the above library are available here: https://arth-shukla.github.io/my-icons-documentation/.
+
+# About Me
+
+Arth Shukla [GitHub](https://github.com/arth-shukla) | [LinkedIn](https://www.linkedin.com/in/arth-shukla/)
