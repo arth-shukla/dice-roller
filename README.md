@@ -1,3 +1,11 @@
+# Technologies Used
+
+Web Development: React, SCSS
+
+DevOps: Git, GitHub Pages
+
+Development Standards: Web Content Accessibility Guidelines (WCAG) 2.1, Aria Authoring Practices Guide (APG)
+
 # Description and Motivation
 
 This Dice Roller was inspired by three main flaws I've seen with other online Dice Rollers:
