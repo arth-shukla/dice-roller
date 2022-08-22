@@ -88,6 +88,8 @@ $primary-pink-dark: rgb(215, 84, 163);
 	--alert-color: var(--primary-other);
 	--alert-shadow: 242, 111, 148, 0.28;
 	--alert-outline: 242, 111, 148, 0.4;
+	--line-pink: var(--primary);
+	--sheen-pink: #821734;
 }
 @mixin blue {
 	--primary: #066aff;
@@ -97,6 +99,8 @@ $primary-pink-dark: rgb(215, 84, 163);
 	--alert-color: var(--primary-other);
 	--alert-shadow: 49, 132, 253, 0.28;
 	--alert-outline: 49, 132, 253, 0.4;
+	--line-blue: var(--primary);
+	--sheen-blue: #0443a2;
 }
 @mixin blue-dark {
 	--primary: rgb(27, 138, 212);
@@ -106,6 +110,8 @@ $primary-pink-dark: rgb(215, 84, 163);
 	--alert-color: var(--primary);
 	--alert-shadow: none;
 	--alert-outline: var(--primary-focus-shadow);
+	--line-blue: var(--primary);
+	--sheen-blue: rgb(118, 188, 234);
 }
 @mixin pink-dark {
 	--primary: rgb(215, 84, 163);
@@ -115,6 +121,8 @@ $primary-pink-dark: rgb(215, 84, 163);
 	--alert-color: var(--primary);
 	--alert-shadow: none;
 	--alert-outline: var(--primary-focus-shadow);
+	--line-pink: var(--primary);
+	--sheen-pink: rgb(242, 159, 209);
 
 	// color palette:
 	// color: rgb(255, 206, 234);

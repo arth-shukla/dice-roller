@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ColorSwitch, DarkModeSwitch } from '@arth-shukla/my-icons'
+import { ColorSwitch, DarkModeSwitch, LineSheen } from '@arth-shukla/my-icons'
 import Roller from './components/Roller/Roller'
 import DicePanel from './components/DicePanel/DicePanel'
 import RollHistory from './components/RollHistory/RollHistory'
@@ -8,6 +8,8 @@ import { Stack } from 'react-bootstrap'
 import './App.scss'
 
 const themeColors = ['blue', 'pink']
+const lineColors = ['var(--line-blue)', 'var(--line-pink)']
+const sheenColors = ['var(--sheen-blue)', 'var(--sheen-pink)']
 
 function App() {
 	const [rolls, setRolls] = useState([])
@@ -59,7 +61,7 @@ function App() {
 					gap={1}
 				>
 					<ColorSwitch
-						color={appColor}
+						currentColorIndex={appColor}
 						className='theme-switch'
 						colors={Array(2).fill('var(--primary)')}
 						onClick={changeColor}
@@ -75,6 +77,12 @@ function App() {
 					/>
 				</Stack>
 			</header>
+			<LineSheen
+				lineHeight='3px'
+				lineColor={lineColors[appColor]}
+				sheenColor={sheenColors[appColor]}
+				animDuration={0.4 * 3}
+			/>
 			<content>
 				<div className='roller-ui'>
 					<Roller>
