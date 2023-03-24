@@ -51,4 +51,4 @@ Demos and documentation for the above library are available here: https://arth-s
 
 # About Me
 
-Arth Shukla [GitHub](https://github.com/arth-shukla) | [LinkedIn](https://www.linkedin.com/in/arth-shukla/)
+Arth Shukla [Site](https://arth.website) | [GitHub](https://github.com/arth-shukla) | [LinkedIn](https://www.linkedin.com/in/arth-shukla/)
